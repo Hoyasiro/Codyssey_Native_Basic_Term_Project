@@ -15,7 +15,7 @@
 | 이미지 생성/수정 | **ChatGPT — GPT Image 2 (gpt-image-2)** | ChatGPT 유료 플랜 | 한글 텍스트 렌더링 정확도가 검토 대상 중 가장 높음. 3장 전체를 단일 모델로 통일 가능 | 최종 3장 전체 생성 |
 | 이미지 생성 (검토·미채택) | Stable Diffusion 1.5 (로컬, AUTOMATIC1111) / UI-UX LoRA / Ideogram / Bing Image Creator / Leonardo AI | — | 모델 비교 검토 단계에서만 사용, 최종 산출물에는 미포함 | N/A |
 | 프로토타입 | **Figma** | 무료 플랜 | 과제 권장 도구 | Hotspot, Overlay 후가공 |
-| Html/Css 변환 | **Claude Opus 4.8** | Pro 구독형 | 코딩 | AI 생성물을 활용한 html/css 기반 사이트 구축 |
+| Html/Css 변환 | **Claude Opus 4.8** | Pro 구독형 | 빌드업(코딩) | AI 생성물을 활용한 html/css 기반 사이트 구축 |
 > (§6 제약 사항) 외부 레퍼런스 이미지를 사용한 경우 이 표 아래에 출처(작성자·URL)를 기록해야 한다. 타인 작업물(Pinterest·Dribbble) 캡처 제출은 금지 사항이다.
 > *→ 본 제출물에서 외부 레퍼런스 이미지나 타인 작업물을 사용하지 않았습니다.*
 
