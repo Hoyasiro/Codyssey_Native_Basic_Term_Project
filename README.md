@@ -32,21 +32,35 @@
 | 보너스 과제 제출 | 최종 | 시연용 프로토타입 html 사이트앱 | RuncrewApp.html (파일) |
 > Figma 링크: https://www.figma.com/design/XnTj4Hm1SKSKtktYlxihJu/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=FicCzWjq2c0L8YKw-0
 
-## 문서 구성
+## 1. 워크플로우 개요
 
-| 문서 | 내용 |
-|---|---|
-| [01_main.md](01_main.md) | 홈 화면 — 검색바 + "오늘의 추천 크루" 카드 + 하단 탭바 |
-| [02_list.md](02_list.md) | 크루 목록 화면 — 지역·요일 필터 + 크루 목록 |
-| [03_detail.md](03_detail.md) | 크루 상세 화면 — 크루 소개 + 러닝 일정 + [참여 신청] |
-| [04_postprocess.md](04_postprocess.md) | 후가공 기록 — 결함 점검, 수정 방식, Figma 덮어쓰기 규격 |
-| [05_figma_prototype.md](05_figma_prototype.md) | 프로토타입 명세 — 프레임 규격, Hotspot 연결표, 공유 설정 |
-| [reference/style_lock_sentence.md](reference/style_lock_sentence.md) | 톤 통일용 스타일 고정 문장 |
-| [reference/model_notes.md](reference/model_notes.md) | 모델 선택 이력 및 시드 지원 여부 |
-
-화면 흐름: `[메인] ─카드 클릭→ [목록] ─항목 클릭→ [상세] ─뒤로가기→ [목록] ─탭바 홈→ [메인]`
-
+```
+[기획-김동호]  서비스 컨셉("러닝크루모집앱" 선정)·화면 3역할 정의 (메인 / 목록 / 상세)
+   │
+[모델 탐색-육민호]  SD 1.5 → LoRA → Ideogram → Bing/Leonardo → GPT Image 2 (최종)
+   │
+[프롬프트 최적화-육민호]  화면별 v1(초안) → v2(최종), 사유·결과 차이 기록
+   │
+[일관성 확보-육민호]  시드 미지원 → '스타일 고정 문장' + 원본 PNG 보존
+   │
+[결과물 검토-김동호] 레이아웃 최종화 결정(main, list - 최종화, detail - 보완)
+   |
+[이미지 수정-육민호] 이미지 수정(v2 → 최종), 프롬프트 기록
+   │
+[프로토타입-김주원]  Figma에 3장 배치 + 투명 Hotspot으로 화면 전환 연결
+   | 
+[후가공-김주원] 텍스트 깨짐·부자연 요소(날짜, 숫자 로직) 대응
+   | 
+[보너스-김동호] 생성된 Asset 기반 html/css 빌드업 코딩
+```
+화면 흐름: `[메인] → '더 보기' 클릭 → [목록] → 항목('갑천 러너스') 클릭 → [상세] → 뒤로가기 → [목록]`
 ---
+
+
+
+
+
+
 
 ## 개선 3단계 구조
 
