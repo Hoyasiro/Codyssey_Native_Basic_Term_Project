@@ -25,12 +25,12 @@
 | 항목 | 버전 | 내용 | 제출 형태 |
 |---|---|---|---|
 | 레이아웃 이미지 | v1 | main, list, detail 레이아웃 3장  | .png (이미지) |
-| 레이아웃 이미지 | v2 | main, list, detail 레이아웃 3장(main과 list는 여기서 최종화)  | .png (이미지) |
+| 레이아웃 이미지 | v2 | main, list, detail 레이아웃 3장<br>(main과 list는 이게 최종)  | .png (이미지) |
 | 레이아웃 이미지 | 최종 | detail 레이아웃 1장  | .png (이미지) |
 | 작업 로그 | 최종 | 프롬프트 변경 이력 · 후가공 기록 · 프로토타입 명세 | README.md (문서) |
 | Figma 링크 | 최종 | 그림 3장을 얹고 화면 전환을 연결한 시연용 프로토타입 | 공유 링크 (보기 권한 공개) |
 | 보너스 과제 제출 | 최종 | 시연용 프로토타입 html 사이트앱 | RuncrewApp.html (파일) |
-> Figma 링크: 
+> Figma 링크: https://www.figma.com/design/XnTj4Hm1SKSKtktYlxihJu/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=FicCzWjq2c0L8YKw-0
 
 ## 문서 구성
 
