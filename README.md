@@ -255,9 +255,9 @@ https://www.figma.com/design/XnTj4Hm1SKSKtktYlxihJu/%EC%A0%9C%EB%AA%A9-%EC%97%86
 
 (1) 총원 숫자 로직 가공
 - 문제 인식: 각 페이지별로 '갑천 러너스' 카드의 총원이 각각 다르게 표현되어 있는 문제 확인
-> 01_main_v2.png: 아이콘 개수(4)+16 = 20
-> 02_list_v2.png: 아이콘 개수(4)+17 = 21
-> 03_detail_v3.png: 아이콘 개수(6)+16 = 22
+> 01_main_v2.png: 아이콘 개수(4)+16 = 20<br>
+> 02_list_v2.png: 아이콘 개수(4)+17 = 21<br>
+> 03_detail_v3.png: 아이콘 개수(6)+16 = 22<br>
 > 03_detail 페이지의 멤버수가 21명으로 표시되어 있어 21명을 기준으로 main페이지와 detail페이지를 후가공하여 21명으로 맞추었다.
 
 
