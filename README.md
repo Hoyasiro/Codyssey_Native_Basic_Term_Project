@@ -113,6 +113,7 @@ https://forms.gle/DbPPp5PXKt6eeRZL6
 개인당 주 6시간 이내의 작업량을 목표로 설정했다. 제한된 시간 내에 고품질의 결과물을 만들기 위해 AI 도구를 활용한 병렬 작업 방식을 도입했다. 이를 통해 팀원들이 동시에 독립적인 업무를 수행하면서도 최종 결과물의 완성도를 담보할 수 있게 했다.
 
 ## 0-3. 워크플로우 개요
+```
 %%{init: {'flowchart': {'htmlLabels': true}}%%
 flowchart TD
   P0["Phase 0 공동 기획<br/>김동호 리드<br/>사전 설문·역할 배정·서비스 컨셉·스타일 기준"]
@@ -165,6 +166,7 @@ flowchart TD
   
   classDef subgraphBox fill:none,stroke:#333,stroke-width:2px
   class A,B,C subgraphBox
+  ```
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  [Phase 0] 공동 기획  ─ 김동호 리드 / 전원 참여
