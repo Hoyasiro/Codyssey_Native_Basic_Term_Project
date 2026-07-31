@@ -66,11 +66,33 @@
 
    (1) 모델 선정
 
-최종적으로 3장 모두 **ChatGPT (gpt-image-2)** 로 통일해 생성했다. SD 1.5(로컬) → LoRA → Ideogram → Bing/Leonardo를 거쳐 GPT Image 2로 정착하기까지의 전체 이력과 선택 이유는 [reference/model_notes.md](reference/model_notes.md)에 정리했다.
+| 단계 | 모델 / 도구 | 시드 지원 | 채택 여부 |
+|---|---|---|---|
+| 1 | Stable Diffusion 1.5 (로컬, AUTOMATIC1111 WebUI) | 지원 (직접 지정 가능) | 미채택 — UI 미학습 모델로 추상 이미지 출력, 텍스트 전면 깨짐 |
+| 2 | SD 1.5 + UI-UX LoRA | 지원 | 미채택 — LoRA가 "전체 폰 목업" 스타일로 편향 학습되어 있어 목적(고립 컴포넌트/실제 화면 재현)과 불일치 |
+| 3 | Ideogram | 지원 (무료 계정도 생성 후 확인 가능) | 미채택 — 품질은 우수했으나 무료 크레딧이 2회 생성 만에 소진되어 3장 전체 작업에 부적합 |
+| 4 | Bing Image Creator / Leonardo AI (GPT Image 2 경유) | 미지원 | 참고용 — 품질 확인 단계에서 사용 |
+| 5 (최종) | ChatGPT — gpt-image-2 | 미지원 | **채택** — 한글 텍스트 렌더링 정확도가 가장 높고, 3장 전체를 하나의 모델로 통일 가능 |
 
    (2) 톤 통일 방법
 
-시드(seed) 고정이 불가능한 모델(GPT Image 2)을 최종 채택했기 때문에, 시드 대신 3장에 동일하게 삽입한 **스타일 고정 문장**으로 색상·레이아웃 원칙·완성도를 통일했다. 상세 내용은 [reference/style_lock_sentence.md](reference/style_lock_sentence.md) 참고.
+시드(seed) 고정이 불가능한 모델(GPT Image 2)을 최종 채택했기 때문에, 시드 대신 3장에 동일하게 삽입한 **스타일 고정 문장**으로 색상·레이아웃 원칙·완성도를 통일했다.
+
+1. **스타일 고정 문장** — 3장 모두 동일한 스타일·레이아웃 원칙 문장을 사용해 톤을 통일.
+```
+Style: clean minimal, modern, soft rounded cards, flat UI design, mint green accent color (#2EC4B6), crisp white background, subtle drop shadows.
+
+Full-screen mobile interface filling the entire frame edge-to-edge, like a real screenshot — not a mockup with a phone frame or background margins.
+
+Bottom: a fixed navigation bar with 4 icons labeled in Korean "홈", "크루 목록", "커뮤니티", "마이". Keep the navigation bar visible on every screen. Highlight only the active tab using the mint accent color while keeping the other tabs neutral gray.
+
+Primary CTA buttons should appear as floating rounded buttons positioned above the bottom navigation bar, with clear spacing separating the CTA from the navigation bar to avoid visual clutter. The CTA should not span the full screen width and should feel visually independent from the navigation bar.
+
+Profile avatars should be rendered as large, high-resolution circular portraits with sharp facial details, consistent sizing, and realistic lighting.
+
+Perfectly aligned typography and spacing, cohesive layout, balanced visual hierarchy, consistent iconography, looks like a real production mobile app screen.
+```
+2. **원본 파일 보존** — 생성된 원본 PNG를 그대로 보관하여, 재생성이 아닌 원본 재사용으로 일관성을 유지
 
    (3) 공통적으로 관찰된 문제점과 해결방안 — 정보를 명시하지 않았을 때의 모델 동작
 
