@@ -108,8 +108,8 @@ Perfectly aligned typography and spacing, cohesive layout, balanced visual hiera
 ```
 
 ## 2-3. 레이아웃 프롬프트
-(1) Main
-## v1 prompt (Original)
+## (1) Main
+# v1 prompt (Original)
 ```
 Create a high-fidelity mobile app UI screen design for the home screen of a running crew matching app called "Project A". Vertical smartphone screen.
 
@@ -126,7 +126,7 @@ Layout from top to bottom:
 
 Vertical 9:16 aspect ratio.
 ```
-## v1 → v2 변경 사항
+# v1 → v2 변경 사항
 
 | 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
 |---|---|---|---|
@@ -136,8 +136,8 @@ Vertical 9:16 aspect ratio.
 | 카드 내부 요소 | CTA 버튼: `"더 보기"` (mint 색상) | 카드 최하단 | 다음 행동(상세 화면 이동)으로 이어지는 유도 요소 부재 → 추가 |
 
 ---
-(2) List
-## v1 prompt (Original)
+## (2) List
+# v1 prompt (Original)
 ```
 Create a high-fidelity mobile app UI screen design for the crew list screen of a running crew matching app called "Project A". Make it a vertical smartphone screen, full-screen mobile interface filling the entire frame edge-to-edge, like a real screenshot — not a mockup with a phone frame or background margins.
 
@@ -155,7 +155,7 @@ Layout from top to bottom:
 
 Perfectly aligned typography and spacing, cohesive layout, looks like a real production mobile app screen. Vertical 9:16 aspect ratio.
 ```
-## v1 → v2 변경 사항
+# v1 → v2 변경 사항
 
 | 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
 |---|---|---|---|
@@ -165,8 +165,8 @@ Perfectly aligned typography and spacing, cohesive layout, looks like a real pro
 | 카드 개수 | 3번째 카드(유성 트랙 클럽, 부분 노출) | 리스트 최하단 | v1은 카드 2개로 끝나 스크롤 가능한 목록이라는 느낌이 약함 → 3번째 카드 부분 노출로 리스트 지속성 암시 |
 
 ---
-(3) Detail
-## v1 prompt (Original)
+## (3) Detail
+# v1 prompt (Original)
 ```
 Create a high-fidelity mobile app UI screen design for the crew detail screen of a running crew matching app called "Project A". Vertical smartphone screen.
 
@@ -180,7 +180,7 @@ Layout from top to bottom:
 
 Vertical 9:16 aspect ratio.
 ```
-## v1 → v2 변경 사항
+# v1 → v2 변경 사항
 
 | 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
 |---|---|---|---|
@@ -189,7 +189,7 @@ Vertical 9:16 aspect ratio.
 | 신규 섹션 | 러닝 일정 섹션 (`월요일 7:00PM 갑천 정규 러닝(5km)`, `토요일 8:00AM 주말 장거리 러닝(10km)`) | 크루 소개 아래 | 상세 화면에서 "언제 만나는지"가 없어 참여 신청 전 핵심 의사결정 정보 누락 → 일정 섹션 추가 |
 | 신규 섹션 | 멤버 아바타 섹션 (아바타 6개 + `+16`) | 러닝 일정 아래 | 크루 소개 텍스트만으로는 실제 활동 인원이 보이지 않음 → 추가 |
 
-## v2 → v3 변경 사항
+# v2 → v3 변경 사항
 
 | 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
 |------|------------------|----------|----------|
@@ -198,3 +198,6 @@ Vertical 9:16 aspect ratio.
 | 멤버 섹션 | 프로필 아바타를 더 큰 크기와 높은 해상도로 개선 | 멤버 섹션 | 얼굴 식별성을 높이고 실제 서비스 수준의 UI 품질 향상 |
 | 레이아웃 | CTA와 탭바의 시각적 계층 구조 강화 | 화면 하단 | 주요 액션 버튼과 내비게이션을 명확히 구분하여 사용성을 개선 |
 | 스타일 일관성 | Style Lock Sentence를 강화하여 레이아웃 및 UI 요소를 고정 | 전체 화면 | 모든 화면에서 동일한 디자인 시스템과 완성도를 유지하기 위함 |
+
+---
+
