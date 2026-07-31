@@ -113,60 +113,62 @@ https://forms.gle/DbPPp5PXKt6eeRZL6
 개인당 주 6시간 이내의 작업량을 목표로 설정했다. 제한된 시간 내에 고품질의 결과물을 만들기 위해 AI 도구를 활용한 병렬 작업 방식을 도입했다. 이를 통해 팀원들이 동시에 독립적인 업무를 수행하면서도 최종 결과물의 완성도를 담보할 수 있게 했다.
 
 ## 0-3. 워크플로우 개요
-```
-%%{init: {'flowchart': {'htmlLabels': true}}%%
 flowchart TD
   P0["Phase 0 공동 기획<br/>김동호 리드<br/>사전 설문·역할 배정·서비스 컨셉·스타일 기준"]
-  
-  P0 --> A1 & B1 & C1
-  
+
   subgraph A["Track A - 육민호 (이미지 생성)"]
     A1["모델 탐색<br/>SD1.5 → Ideogram<br/>→ GPT Image 2"]
     A2["프롬프트 최적화<br/>v1 → v2<br/>사유·결과 차이 기록"]
     A3["일관성 확보<br/>스타일 고정 문장<br/>원본 PNG 보존"]
     A4["detail 이미지<br/>v2 → v3<br/>프롬프트 기록"]
-    
     A1 --> A2 --> A3
-    A3 -.->|보완 요청| A4
   end
-  
+
   subgraph B["Track B - 김주원 (프로토타입 설계)"]
     B1["화면 전환 시나리오<br/>메인→목록→상세<br/>Figma 프레임·컴포넌트"]
     B2["Hotspot 규격 정의<br/>투명 영역 좌표<br/>후가공 방식 비교"]
     B3["main·list 배치<br/>Hotspot 연결"]
     B4["detail 배치<br/>전체 Hotspot 완결<br/>후가공 통일"]
-    
-    B1 --> B2 -.->|대기| B3 --> B4
+    B1 --> B2
+    B2 -.->|대기| B3
+    B3 --> B4
   end
-  
+
   subgraph C["Track C - 김동호 (문서·빌드)"]
     C1["작업 로그 골격<br/>제출물 체크리스트"]
     C2["HTML/CSS 스켈레톤<br/>레이아웃·네비 사전 구성"]
     C3["확정 에셋 기반<br/>HTML/CSS 빌드업<br/>RuncrewApp.html"]
-    
     C1 --> C2 --> C3
   end
-  
-  A3 --> S1["◆ 동기화 1<br/>결과물 검토<br/>main·list 확정"]
+
+  S1["◆ 동기화 1<br/>결과물 검토<br/>main·list 확정"]
+  S2["◆ 동기화 2<br/>에셋 확정<br/>3장 최종본"]
+  S3["◆ 동기화 3<br/>최종 통합·제출"]
+  END["Figma 공유 링크<br/>README.md<br/>RuncrewApp.html"]
+
+  P0 --> A1
+  P0 --> B1
+  P0 --> C1
+
+  A3 --> S1
   B2 --> S1
   C2 --> S1
-  
+
   S1 -->|즉시 전달| B3
   S1 -->|보완 지시| A4
-  
-  A4 --> S2["◆ 동기화 2<br/>에셋 확정<br/>3장 최종본"]
+
+  A4 --> S2
   B3 --> S2
-  
-  S2 --> B4 & C3
-  
-  B4 --> S3["◆ 동기화 3<br/>최종 통합·제출"]
+
+  S2 --> B4
+  S2 --> C3
+
+  B4 --> S3
   C3 --> S3
-  
-  S3 --> END["Figma 공유 링크<br/>README.md<br/>RuncrewApp.html"]
-  
+  S3 --> END
+
   classDef subgraphBox fill:none,stroke:#333,stroke-width:2px
   class A,B,C subgraphBox
-  ```
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  [Phase 0] 공동 기획  ─ 김동호 리드 / 전원 참여
