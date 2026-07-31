@@ -141,47 +141,65 @@ Vertical 9:16 aspect ratio.
 | 카드 내부 요소 | CTA 버튼: `"더 보기"` (mint 색상) | 카드 최하단 | 다음 행동(상세 화면 이동)으로 이어지는 유도 요소 부재 → 추가 |
 
 ---
-
-
-## 폴더 구조
-
+(2) List
+## v1 prompt (Original)
 ```
-project-a-prompt-log/
-├── README.md
-├── 01_main.md
-├── 02_list.md
-├── 03_detail.md
-├── 04_postprocess.md
-├── 05_figma_prototype.md
-├── images/
-│   ├── 01_main_v1.png / 01_main_v2.png / 01_main_final.png
-│   ├── 02_list_v1.png / 02_list_v2.png / 02_list_final.png
-│   └── 03_detail_v1.png / 03_detail_v2.png / 03_detail_final.png
-└── reference/
-    ├── style_lock_sentence.md
-    └── model_notes.md
+Create a high-fidelity mobile app UI screen design for the crew list screen of a running crew matching app called "Project A". Make it a vertical smartphone screen, full-screen mobile interface filling the entire frame edge-to-edge, like a real screenshot — not a mockup with a phone frame or background margins.
+
+Style: clean minimal, modern, soft rounded cards, flat UI design, mint green accent color (#2EC4B6), crisp white background, subtle drop shadows.
+
+Layout from top to bottom:
+1. Screen title in bold Korean text "크루 목록", aligned to the left margin.
+2. Filter section: a dropdown chip with Korean text "지역: 대전 전체". Below it, a horizontal row of 7 day-of-week toggles as individual Korean characters: 월 화 수 목 금 토 일. "월" highlighted in solid mint green with white text, the rest in outline or gray default color.
+3. A sleek search bar with a magnifying glass icon and Korean placeholder text "크루 검색 (예: 유성)".
+4. Vertically stacked rounded cards with soft edges, each showing a photo of runners on different Daejeon trails and parks:
+   - Card 1: photo of a running group, bold Korean title "갑천 러너스", small cluster of Korean profile avatars, detail text "멤버: 21명 / 다음 러닝: 월요일 7:00PM / 평점: 4.9".
+   - Card 2: different photo, bold Korean title "둔산동 씨티 러너스", cluster of avatars, detail text "멤버: 14명 / 다음 러닝: 월요일 7:00PM / 평점: 4.7".
+   - Card 3 (partially visible at bottom): different photo, bold Korean title "유성 트랙 클럽", cluster of avatars.
+5. Bottom: fixed navigation bar with 4 icons labeled in Korean "홈", "크루 목록", "커뮤니티", "마이". "크루 목록" icon highlighted in mint accent color.
+
+Perfectly aligned typography and spacing, cohesive layout, looks like a real production mobile app screen. Vertical 9:16 aspect ratio.
 ```
+## v1 → v2 변경 사항
+
+| 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
+|---|---|---|---|
+| 레이아웃 지시 | `full-screen edge-to-edge, not a mockup with a phone frame` | 상단 전체 설명부 | v1에 OS 상태바가 함께 생성되어 목업처럼 보임 → 프레임 없이 꽉 채우도록 명시 |
+| 필터 구성 | 요일 토글 7개(월~일, "월" 강조) | 필터 섹션 | v1은 지역 필터만 있어 시간대별 검색이 불가능 → 요일 필터 추가 |
+| 카드 정보 | `멤버: 21명 / 다음 러닝: 월요일 7:00PM / 평점: 4.9` 등 구체적 detail text | 카드 하단 | v1에서는 정보를 지정하지 않자 모델이 "총 28명"처럼 임의의 부정확한 정보를 자체 생성 → 원하는 정보 항목을 명시적으로 지정해 통제 |
+| 카드 개수 | 3번째 카드(유성 트랙 클럽, 부분 노출) | 리스트 최하단 | v1은 카드 2개로 끝나 스크롤 가능한 목록이라는 느낌이 약함 → 3번째 카드 부분 노출로 리스트 지속성 암시 |
 
 ---
+(3) Detail
+## v1 prompt (Original)
+```
+Create a high-fidelity mobile app UI screen design for the crew detail screen of a running crew matching app called "Project A". Vertical smartphone screen.
 
-## 제출 전 최종 체크리스트
+Style: clean minimal, modern, soft rounded cards, flat UI design, mint green accent color (#2EC4B6), crisp white background, subtle drop shadows.
 
-**산출물 ① 이미지**
-- [ ] `_final.png` 3장이 있고 형식이 PNG인가
-- [ ] 세 화면의 역할이 명확히 다른가 (메인 / 목록 / 상세)
-- [ ] 비율이 9:16인가
-- [ ] 깨진 한글이 하나도 없는가
-- [ ] 3장의 색상·카드 스타일·폰트 톤이 일관되는가
+Layout from top to bottom:
+1. Top: a large header photo showing a running group along a riverside path, with a back arrow icon in the top-left corner overlaid on the photo.
+2. Crew title in bold Korean text: "갑천 러너스".
+3. Crew introduction section with a section title "크루 소개" in bold Korean text, followed by a short paragraph of Korean body text describing the crew's running style and atmosphere.
+4. Bottom: a fixed mint-green CTA button spanning the width of the screen, labeled "참여 신청" in bold white Korean text.
 
-**산출물 ② 작업 로그**
-- [ ] 초안 → 수정 → 최종 3단계가 모두 기록되어 있는가
-- [ ] 각 단계에 "왜 바꿨는지"와 "결과가 어떻게 달라졌는지"가 있는가
-- [ ] 프롬프트 원문이 그대로 실려 있는가
-- [ ] 사용 도구 이름이 문서 앞부분에 명시되어 있는가
-- [ ] 레퍼런스 출처(또는 미사용 사실)가 기록되어 있는가
-- [ ] 후가공 기록에 실제 발견한 결함이 채워져 있는가 (템플릿 문구가 남아 있지 않은가)
+Vertical 9:16 aspect ratio.
+```
+## v1 → v2 변경 사항
 
-**산출물 ③ Figma**
-- [ ] 시크릿 창에서 링크가 열리는가
-- [ ] Hotspot 클릭으로 3화면 전환이 실제 동작하는가
-- [ ] 프레임에 올라간 이미지가 `_final` 인가
+| 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
+|---|---|---|---|
+| 크루 정보 | 위치 태그 `대전 · 갑천` | 제목 하단 | v1은 크루가 어느 지역에서 활동하는지 알 수 없음 → 위치 정보 추가 |
+| 크루 정보 | Stats 행 `멤버: 21명 / 평점: 4.9 / 개설일: 2023.03` | 제목 하단, 위치 태그 아래 | v1에서 크루의 규모·신뢰도·운영 기간을 알 수 없음 → 추가 |
+| 신규 섹션 | 러닝 일정 섹션 (`월요일 7:00PM 갑천 정규 러닝(5km)`, `토요일 8:00AM 주말 장거리 러닝(10km)`) | 크루 소개 아래 | 상세 화면에서 "언제 만나는지"가 없어 참여 신청 전 핵심 의사결정 정보 누락 → 일정 섹션 추가 |
+| 신규 섹션 | 멤버 아바타 섹션 (아바타 6개 + `+16`) | 러닝 일정 아래 | 크루 소개 텍스트만으로는 실제 활동 인원이 보이지 않음 → 추가 |
+
+## v2 → v3 변경 사항
+
+| 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
+|------|------------------|----------|----------|
+| 하단 내비게이션 | 고정 하단 탭바 추가 (홈 / 크루 목록 / 커뮤니티 / 마이) | 화면 하단 | 모든 화면에서 일관된 내비게이션을 제공하고 화면 간 이동성을 향상 |
+| CTA 개선 | 참여 신청 버튼을 Floating 형태로 변경하고 탭바와 충분한 간격 확보 | 화면 하단 | CTA와 탭바가 붙어 보이는 시각적 혼잡(Clutter)을 줄이고 버튼의 우선순위를 높임 |
+| 멤버 섹션 | 프로필 아바타를 더 큰 크기와 높은 해상도로 개선 | 멤버 섹션 | 얼굴 식별성을 높이고 실제 서비스 수준의 UI 품질 향상 |
+| 레이아웃 | CTA와 탭바의 시각적 계층 구조 강화 | 화면 하단 | 주요 액션 버튼과 내비게이션을 명확히 구분하여 사용성을 개선 |
+| 스타일 일관성 | Style Lock Sentence를 강화하여 레이아웃 및 UI 요소를 고정 | 전체 화면 | 모든 화면에서 동일한 디자인 시스템과 완성도를 유지하기 위함 |
