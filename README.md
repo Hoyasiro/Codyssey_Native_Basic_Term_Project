@@ -112,19 +112,33 @@ Perfectly aligned typography and spacing, cohesive layout, balanced visual hiera
    -  '참여 신청' CTA  
    -  최하단 네비게이션바  
 
-## 2-3. 레이아웃 상세
+## 2-3. 레이아웃 프롬프트
+(1) Main
+## v1 prompt (Original)
+```
+Create a high-fidelity mobile app UI screen design for the home screen of a running crew matching app called "Project A". Vertical smartphone screen.
 
-과제 §2가 요구하는 「초안 → 수정 → 최종」은 이 저장소에서 다음과 같이 대응된다.
+Style: clean minimal, modern, soft rounded cards, flat UI design, mint green accent color (#2EC4B6), crisp white background, subtle drop shadows.
 
-| 단계 | 무엇을 바꿨나 | 기록 위치 |
-|---|---|---|
-| **초안 (v1)** | 화면 역할·스타일만 지정한 최초 프롬프트 | 각 화면 문서 「v1 (before)」 |
-| **수정 (v2)** | 프레임 제거 지시 추가, 정보 요소 명시 지정, 카드·섹션 보강 | 각 화면 문서 「v2 (after)」 + 「v1 → v2 변경 사항」 표 |
-| **최종 (final)** | 프롬프트로는 해결되지 않는 한글 깨짐을 Figma 텍스트 레이어로 대체 | [04_postprocess.md](04_postprocess.md) |
+Layout from top to bottom:
+1. A sleek search bar with a magnifying glass icon and Korean placeholder text "러닝 크루 검색 (예: 강남, 6분 페이스)".
+2. App header title in Korean: "Project A: 러닝 크루 매칭".
+3. A prominent rounded card titled "오늘의 추천 크루". Inside the card:
+   - A photo of diverse young adults running together happily along a river path at sunset.
+   - Crew title in bold Korean text: "갑천 러너스".
+   - Small cluster of Korean profile avatars representing crew members.
+4. Bottom: a fixed navigation bar with 4 icons labeled in Korean "홈", "크루 목록", "커뮤니티", "마이". The "홈" icon highlighted in mint accent color, showing it is the active screen.
 
-> 프롬프트 수정만으로 끝내지 않고 후가공을 별도 단계로 분리한 이유:
-> 시드 고정이 불가능한 모델을 채택했기 때문에 **재생성은 곧 톤 붕괴**를 의미한다.
-> 이미 확보한 3장의 일관성을 지키면서 결함만 제거하려면 재생성이 아닌 덮어쓰기가 유일한 선택지였다.
+Vertical 9:16 aspect ratio.
+```
+## v1 → v2 변경 사항
+
+| 구분 | 추가/변경된 요소 | 반영 위치 | 추가 사유 |
+|---|---|---|---|
+| 레이아웃 지시 | `full-screen mobile interface filling the entire frame edge-to-edge, like a real screenshot — not a mockup with a phone frame or background margins.` | 상단 전체 설명부 | v1 결과에 OS 상태바(시간·신호·배터리)가 함께 생성되어 목업처럼 보임 → 실제 스크린샷처럼 프레임 없이 꽉 채우도록 명시 |
+| 카드 내부 요소 | Tag chips: `"#6:00 페이스"`, `"#주말러닝"`, `"#초보환영"` | "오늘의 추천 크루" 카드 내부 | v1은 카드에 사진·제목·아바타만 있어 크루 특징이 드러나지 않음 → 정보성 태그 추가 |
+| 카드 내부 요소 | Status text: `"최근 활동: 1일 전"` | 카드 하단 | 크루 활동 신뢰도를 보여줄 정보 부재 → 추가 |
+| 카드 내부 요소 | CTA 버튼: `"더 보기"` (mint 색상) | 카드 최하단 | 다음 행동(상세 화면 이동)으로 이어지는 유도 요소 부재 → 추가 |
 
 ---
 
