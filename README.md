@@ -80,18 +80,18 @@ N마리너_김동호 — 2026-07-25 오전 12:42
 <details>
    <summary>펼치기</summary>
 (1)
-   N마리너_김동호 — 2026-07-24 오전 11:18
-안녕하세요? 팀장 김동호라고 합니다. Term Project 앞으로 잘 부탁드리고, 최대한 리드해볼테니 잘 따라와주시고 협조 잘해주시면 감사하겠습니다.
+   N마리너_김동호 — 2026-07-24 오전 11:18<br>
+안녕하세요? 팀장 김동호라고 합니다. Term Project 앞으로 잘 부탁드리고, 최대한 리드해볼테니 잘 따라와주시고 협조 잘해주시면 감사하겠습니다.<br>
 
-과제 선정을 위한 설문을 간단히 부탁드립니다.(기한: ~7/24(금) 오전12시(0시))
+과제 선정을 위한 설문을 간단히 부탁드립니다.(기한: ~7/24(금) 오전12시(0시))<br>
 https://forms.gle/DbPPp5PXKt6eeRZL6
 
 (2)
-   N마리너_김동호 — 2026-07-25 오전 9:05
-[설문 결과보고 공유]
-링크: https://github.com/Hoyasiro/Codyssey_Native_Basic_Term_Project/blob/main/Mission_Selection_Assessment_Report.md
+   N마리너_김동호 — 2026-07-25 오전 9:05<br>
+[설문 결과보고 공유]<br>
+링크: https://github.com/Hoyasiro/Codyssey_Native_Basic_Term_Project/blob/main/Mission_Selection_Assessment_Report.md<br>
 
-10시에 미션이 시작됩니다.
+10시에 미션이 시작됩니다.<br>
 </details>
 - Project A 미션 중 강점으로 '이미지 생성 및 수정'이라 답하여 레이아웃 생성 업무를 배정하였다.
 
