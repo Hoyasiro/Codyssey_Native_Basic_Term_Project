@@ -337,6 +337,24 @@ https://www.figma.com/design/XnTj4Hm1SKSKtktYlxihJu/%EC%A0%9C%EB%AA%A9-%EC%97%86
                                          └──→ 홈 버튼(하단 바) 클릭 → [메인]└──→ 홈 버튼(하단 바) 클릭 → [메인]
 
 ```
+flowchart TD
+    Main(["🏠 메인"])
+    List["📋 목록"]
+    Detail["📄 상세<br/>(갑천 러너스)"]
+
+    Main  -->|"'더 보기' 클릭"| List
+    List  -->|"항목 '갑천 러너스' 클릭"| Detail
+
+    Detail -.->|"뒤로가기"| List
+    List   -.->|"홈 버튼 (하단 바)"| Main
+    Detail -.->|"홈 버튼 (하단 바)"| Main
+
+    classDef entry fill:#E8F0FE,stroke:#4285F4,stroke-width:2px
+    classDef page  fill:#FFFFFF,stroke:#5F6368,stroke-width:1.5px
+    class Main entry
+    class List,Detail page
+
+
 ## 2-3. 후가공 방식 선택 근거
 
 프롬프트 개선(v1→v2→v3)만으로는 수학적 로직 및 일부 부자연스러운 결함이 완전히 제거되지 않았다. 남은 결함을 처리하는 선택지는 넷이었다.
