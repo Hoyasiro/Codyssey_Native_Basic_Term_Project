@@ -337,6 +337,7 @@ https://www.figma.com/design/XnTj4Hm1SKSKtktYlxihJu/%EC%A0%9C%EB%AA%A9-%EC%97%86
                                          └──→ 홈 버튼(하단 바) 클릭 → [메인]└──→ 홈 버튼(하단 바) 클릭 → [메인]
 
 ```
+```mermaid
 flowchart TD
     Main(["🏠 메인"])
     List["📋 목록"]
@@ -353,7 +354,7 @@ flowchart TD
     classDef page  fill:#FFFFFF,stroke:#5F6368,stroke-width:1.5px
     class Main entry
     class List,Detail page
-
+```
 
 ## 2-3. 후가공 방식 선택 근거
 
