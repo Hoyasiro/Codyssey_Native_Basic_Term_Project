@@ -332,11 +332,6 @@ https://www.figma.com/design/XnTj4Hm1SKSKtktYlxihJu/%EC%A0%9C%EB%AA%A9-%EC%97%86
 
 
 ## 2-2. Hotspot 연결 구조 (§2, §4)
-```
-화면 흐름: [메인] → '더 보기' 클릭 → [목록] → 항목('갑천 러너스') 클릭 → [상세] → 뒤로가기 → [목록]
-                                         └──→ 홈 버튼(하단 바) 클릭 → [메인]└──→ 홈 버튼(하단 바) 클릭 → [메인]
-
-```
 ```mermaid
 flowchart TD
     Main(["🏠 메인"])
