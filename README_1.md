@@ -345,13 +345,23 @@ Vertical 9:16 aspect ratio.
 
 ### 2-2. Hotspot 연결 구조 (§2, §4)
 
-```
-[메인] ──'더 보기' 클릭──> [목록] ──항목('갑천 러너스') 클릭──> [상세]
-                                                              │
-                              [목록] <────────뒤로가기─────────┘
+```mermaid
+flowchart TD
+    Main(["🏠 메인"])
+    List["📋 목록"]
+    Detail["📄 상세<br/>(갑천 러너스)"]
 
-[목록] ──홈 버튼(하단 탭바)──> [메인]
-[상세] ──홈 버튼(하단 탭바)──> [메인]
+    Main  -->|"'더 보기' 클릭"| List
+    List  -->|"항목 '갑천 러너스' 클릭"| Detail
+
+    Detail -.->|"뒤로가기"| List
+    List   -.->|"홈 버튼 (하단 바)"| Main
+    Detail -.->|"홈 버튼 (하단 바)"| Main
+
+    classDef entry fill:#E8F0FE,stroke:#4285F4,stroke-width:2px
+    classDef page  fill:#FFFFFF,stroke:#5F6368,stroke-width:1.5px
+    class Main entry
+    class List,Detail page
 ```
 
 ### 2-3. 후가공 방식 선택 근거
